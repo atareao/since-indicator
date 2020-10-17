@@ -212,13 +212,17 @@ var WebcamManager = GObject.registerClass(
 
         _settingsChanged(){
             this._update();
+            let checktime = this._settings.get_value('watch-time').deep_unpack();
+            let monitor = this._settings.get_value('monitor').deep_unpack();
             if(this._sourceId > 0){
                 GLib.source_remove(this._sourceId);
             }
-            this._sourceId = GLib.timeout_add_seconds(
-                GLib.PRIORITY_DEFAULT, this._checktime,
-                this._update.bind(this));
-            log(this._sourceId);
+            if(monitor){
+                this._sourceId = GLib.timeout_add_seconds(
+                    GLib.PRIORITY_DEFAULT, checktime,
+                    this._update.bind(this));
+                log(this._sourceId);
+            }
         }
     }
 );
