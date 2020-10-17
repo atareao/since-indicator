@@ -1,0 +1,16 @@
+{
+  "autor": "Lorenzo Carbonell", 
+  "copyright": "2.018", 
+  "description": "A manager for the webcam.\nWith this extension you can enable or disable the webcam from GNOME Shell.\nThis extension load or unloads the module uvcvideo from the Linux Kernel.\nTo enable or disable the webcam. Simple and easy.", 
+  "gettext-domain": "webcam-manager@atareao.es", 
+  "name": "Webcam manager", 
+  "settings-schema": "es.atareao.webcam-manager", 
+  "shell-version": [
+    "3.26", 
+    "3.28",
+    "3.36"
+  ], 
+  "url": "https://www.atareao.es/aplicacion/webcam-manager", 
+  "uuid": "webcam-manager@atareao.es", 
+  "version": 2
+}

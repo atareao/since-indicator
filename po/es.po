@@ -1,0 +1,171 @@
+# Language * translations for Webcam manager package.
+# Copyright (C) 2018 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Webcam manager package.
+# Lorenzo <atareao@atareao.es>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Webcam manager - 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-23 09:36+0200\n"
+"PO-Revision-Date: 2018-09-22 08:42+0200\n"
+"Last-Translator: Lorenzo <atareao@atareao.es>\n"
+"Language-Team: Language *\n"
+"Language: *\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: schemas/es.atareao.webcam-manager.gschema.xml:6
+msgid "Debug Mode"
+msgstr "Modo depuración"
+
+#: schemas/es.atareao.webcam-manager.gschema.xml:7
+msgid "Enable debug features and logging"
+msgstr "Habilita el modo de depuración"
+
+#: schemas/es.atareao.webcam-manager.gschema.xml:11
+msgid "Watch the webcam"
+msgstr "Vigila la webcam"
+
+#: schemas/es.atareao.webcam-manager.gschema.xml:12
+msgid "Check if kernel module is loaded"
+msgstr "Comprueba si el módulo del kernel está cargado"
+
+#: schemas/es.atareao.webcam-manager.gschema.xml:16
+msgid "Watch time"
+msgstr "Tiempo entre comprobaciones"
+
+#: schemas/es.atareao.webcam-manager.gschema.xml:17
+msgid "Time to check if kernel module is loaded"
+msgstr "Tiempo entre comprobaciones de la carga del módulo del kernel"
+
+#: extension.js:83 extension.js:164
+msgid "Disable Webcam"
+msgstr "Inhabilita la Webcam"
+
+#: extension.js:90
+msgid "Settings"
+msgstr "Configuración"
+
+#: extension.js:168
+msgid "Enable Webcam"
+msgstr "Habilita la configuración"
+
+#: extension.js:189
+msgid "Help"
+msgstr "Ayuda"
+
+#: extension.js:191
+msgid "Project Page"
+msgstr "Página del proyecto"
+
+#: extension.js:193
+msgid "Get help online..."
+msgstr "Ayuda en línea..."
+
+#: extension.js:195
+msgid "Translate this application..."
+msgstr "Traduce la aplicación..."
+
+#: extension.js:197
+msgid "Report a bug..."
+msgstr "Informa de un error..."
+
+#: extension.js:200
+msgid "El atareao"
+msgstr "El atareao"
+
+#: extension.js:202
+msgid "Follow me in Twitter"
+msgstr "Sígueme en Twitter"
+
+#: extension.js:204
+msgid "Follow me in Facebook"
+msgstr "Sígueme en Facebook"
+
+#: extension.js:206
+msgid "Follow me in Google+"
+msgstr "Sígueme en Google+"
+
+#: preferenceswidget.js:143
+msgid "Nothing"
+msgstr "Nada"
+
+#: preferenceswidget.js:156
+msgid "True"
+msgstr "Cierto"
+
+#: preferenceswidget.js:169
+msgid "False"
+msgstr "Falso"
+
+#: prefs.js:41
+msgid "Webcam Manager"
+msgstr "Webcam Manager"
+
+#: prefs.js:46
+msgid "Version: "
+msgstr "Versión: "
+
+#: prefs.js:57
+msgid "Atareao"
+msgstr "Atareao"
+
+#: prefs.js:64
+msgid "Copyright © 2018 Lorenzo Carbonell"
+msgstr "Copyright © 2018 Lorenzo Carbonell"
+
+#: prefs.js:71
+msgid "This program is free software: you can redistribute it and/or modify"
+msgstr ""
+
+#: prefs.js:72
+msgid "it under the terms of the GNU General Public License as published by"
+msgstr ""
+
+#: prefs.js:73
+msgid "the Free Software Foundation, either version 3 of the License, or"
+msgstr ""
+
+#: prefs.js:74
+msgid "(at your option) any later version."
+msgstr ""
+
+#: prefs.js:75
+msgid "This program is distributed in the hope that it will be useful,"
+msgstr ""
+
+#: prefs.js:76
+msgid "but WITHOUT ANY WARRANTY; without even the implied warranty of"
+msgstr ""
+
+#: prefs.js:77
+msgid "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the"
+msgstr ""
+
+#: prefs.js:78
+msgid "GNU General Public License for more details."
+msgstr ""
+
+#: prefs.js:79
+msgid "You should have received a copy of the GNU General Public License"
+msgstr ""
+
+#: prefs.js:80
+msgid ""
+"along with this program.  If not, see <a href=\"https://www.gnu.org/licenses/"
+"\">https://www.gnu.org/licenses/</a>."
+msgstr ""
+
+#: prefs.js:94
+msgid "Preferences"
+msgstr "Preferencias"
+
+#: prefs.js:98
+msgid "Options"
+msgstr "Opcions"
+
+#: prefs.js:105
+msgid "About"
+msgstr "Acerca de..."
