@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Webcam manager - 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-23 09:36+0200\n"
+"POT-Creation-Date: 2020-10-17 07:49+0200\n"
 "PO-Revision-Date: 2018-09-22 08:42+0200\n"
 "Last-Translator: Lorenzo <atareao@atareao.es>\n"
 "Language-Team: Language *\n"
@@ -40,132 +40,182 @@ msgstr "Tiempo entre comprobaciones"
 msgid "Time to check if kernel module is loaded"
 msgstr "Tiempo entre comprobaciones de la carga del módulo del kernel"
 
-#: extension.js:83 extension.js:164
-msgid "Disable Webcam"
+#: schemas/es.atareao.webcam-manager.gschema.xml:21
+msgid "Dark theme"
+msgstr "Tema oscuro"
+
+#: schemas/es.atareao.webcam-manager.gschema.xml:22
+msgid "Enable dark theme otherwise light theme"
+msgstr "Habilita el tema oscuro"
+
+#: extension.js:69
+msgid "Disable the webcam"
 msgstr "Inhabilita la Webcam"
 
-#: extension.js:90
+#: extension.js:70
+msgid "Enable the webcam"
+msgstr "Habilita la webcam"
+
+#: extension.js:78
 msgid "Settings"
 msgstr "Configuración"
 
-#: extension.js:168
-msgid "Enable Webcam"
+#: extension.js:145
+msgid "Disable webcam"
+msgstr "Inhabilita la Webcam"
+
+#: extension.js:148
+#, fuzzy
+msgid "Enable webcam"
 msgstr "Habilita la configuración"
 
-#: extension.js:189
+#: extension.js:173
 msgid "Help"
 msgstr "Ayuda"
 
-#: extension.js:191
+#: extension.js:175
 msgid "Project Page"
 msgstr "Página del proyecto"
 
-#: extension.js:193
+#: extension.js:177
 msgid "Get help online..."
 msgstr "Ayuda en línea..."
 
-#: extension.js:195
-msgid "Translate this application..."
-msgstr "Traduce la aplicación..."
-
-#: extension.js:197
+#: extension.js:179
 msgid "Report a bug..."
 msgstr "Informa de un error..."
 
-#: extension.js:200
+#: extension.js:184
 msgid "El atareao"
 msgstr "El atareao"
 
-#: extension.js:202
-msgid "Follow me in Twitter"
-msgstr "Sígueme en Twitter"
+#: extension.js:186
+msgid "GitHub"
+msgstr "GitHub"
 
-#: extension.js:204
-msgid "Follow me in Facebook"
-msgstr "Sígueme en Facebook"
+#: extension.js:188
+msgid "Twitter"
+msgstr "Twitter"
 
-#: extension.js:206
-msgid "Follow me in Google+"
-msgstr "Sígueme en Google+"
+#: extension.js:190
+msgid "Telegram"
+msgstr "Telegram"
 
-#: preferenceswidget.js:143
+#: extension.js:192
+msgid "Mastodon"
+msgstr "Mastodon"
+
+#: extension.js:194
+msgid "Spotify"
+msgstr "Spotify"
+
+#: extension.js:196
+msgid "YouTube"
+msgstr "YouTube"
+
+#: dialogwidgets.js:27
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: dialogwidgets.js:28
+msgid "Ok"
+msgstr "Ok"
+
+#: preferenceswidget.js:232
 msgid "Nothing"
 msgstr "Nada"
 
-#: preferenceswidget.js:156
+#: preferenceswidget.js:245
 msgid "True"
 msgstr "Cierto"
 
-#: preferenceswidget.js:169
+#: preferenceswidget.js:258
 msgid "False"
 msgstr "Falso"
 
-#: prefs.js:41
+#: preferenceswidget.js:407
+msgid "Items"
+msgstr "Elementos"
+
+#: preferenceswidget.js:418
+msgid "ssh tunnel instruction"
+msgstr ""
+
+#: prefs.js:63
 msgid "Webcam Manager"
 msgstr "Webcam Manager"
 
-#: prefs.js:46
+#: prefs.js:68
 msgid "Version: "
 msgstr "Versión: "
 
-#: prefs.js:57
+#: prefs.js:79
 msgid "Atareao"
 msgstr "Atareao"
 
-#: prefs.js:64
+#: prefs.js:86
 msgid "Copyright © 2018 Lorenzo Carbonell"
 msgstr "Copyright © 2018 Lorenzo Carbonell"
 
-#: prefs.js:71
-msgid "This program is free software: you can redistribute it and/or modify"
-msgstr ""
-
-#: prefs.js:72
-msgid "it under the terms of the GNU General Public License as published by"
-msgstr ""
-
-#: prefs.js:73
-msgid "the Free Software Foundation, either version 3 of the License, or"
-msgstr ""
-
-#: prefs.js:74
-msgid "(at your option) any later version."
-msgstr ""
-
-#: prefs.js:75
-msgid "This program is distributed in the hope that it will be useful,"
-msgstr ""
-
-#: prefs.js:76
-msgid "but WITHOUT ANY WARRANTY; without even the implied warranty of"
-msgstr ""
-
-#: prefs.js:77
-msgid "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the"
-msgstr ""
-
-#: prefs.js:78
-msgid "GNU General Public License for more details."
-msgstr ""
-
-#: prefs.js:79
-msgid "You should have received a copy of the GNU General Public License"
-msgstr ""
-
-#: prefs.js:80
+#: prefs.js:93
 msgid ""
-"along with this program.  If not, see <a href=\"https://www.gnu.org/licenses/"
-"\">https://www.gnu.org/licenses/</a>."
+"THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS "
+"OR\n"
 msgstr ""
 
 #: prefs.js:94
+msgid ""
+"IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n"
+msgstr ""
+
+#: prefs.js:95
+msgid ""
+"FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n"
+msgstr ""
+
+#: prefs.js:96
+msgid ""
+"AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n"
+msgstr ""
+
+#: prefs.js:97
+msgid ""
+"LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\n"
+msgstr ""
+
+#: prefs.js:98
+msgid ""
+"FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER "
+"DEALINGS\n"
+msgstr ""
+
+#: prefs.js:99
+msgid "IN THE SOFTWARE.\n"
+msgstr ""
+
+#: prefs.js:126
 msgid "Preferences"
 msgstr "Preferencias"
 
-#: prefs.js:98
+#: prefs.js:130
 msgid "Options"
 msgstr "Opcions"
 
-#: prefs.js:105
+#: prefs.js:138
 msgid "About"
 msgstr "Acerca de..."
+
+#~ msgid "Enable WireGuard"
+#~ msgstr "Habilita la configuración"
+
+#~ msgid "Translate this application..."
+#~ msgstr "Traduce la aplicación..."
+
+#~ msgid "Follow me in Twitter"
+#~ msgstr "Sígueme en Twitter"
+
+#~ msgid "Follow me in Facebook"
+#~ msgstr "Sígueme en Facebook"
+
+#~ msgid "Follow me in Google+"
+#~ msgstr "Sígueme en Google+"

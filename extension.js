@@ -66,8 +66,8 @@ var WebcamManager = GObject.registerClass(
             this.actor.add_child(box);
 
             this.webcamSwitch = new PopupMenu.PopupSwitchMenuItem(
-                _('Disable webcam'), {active: true})
-            this.webcamSwitch.label.set_text(_('Enable WireGuard'));
+                _('Disable the webcam'), {active: true})
+            this.webcamSwitch.label.set_text(_('Enable the webcam'));
             this.webcamSwitch.connect('toggled',
                                       this._toggleSwitch.bind(this));
 
