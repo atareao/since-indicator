@@ -31,7 +31,9 @@ codefactor-badge: True
 </p>
 <h2>🏠 <a href="https://www.atareao.es/aplicacion/desactivar-tu-webcam/" id="homepage">Homepage</a></h2>
 <p>With <span id="project_title">Webcam Manager</span> you can enable or disable the webcam from GNOME Shell.</p>
+
 ### How it works?
+
 This extension unloads the module `uvcvideo` from the Linux Kernel. **Simple and easy**.
 <!-- end description -->
 
