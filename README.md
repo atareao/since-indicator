@@ -8,21 +8,7 @@ This extension unloads the module `uvcvideo` from the Linux Kernel. **Simple and
 
 ### Installation
 
-In order to Webcam-manager works you need to edit `/etc/sudoers/`. You have to add the following line, if you want that webcam-manager works only for your user,
-
-```
-yourusername ALL=:NOPASSWD /sbin/modprobe -av uvcvideo, /sbin/modprobe -rv uvcvideo
-```
-
-If you want that this extension of GNOME Shell works for everybody on your PC, you have to add the following line,
-
-```
-ALL ALL=:NOPASSWD /sbin/modprobe -av uvcvideo, /sbin/modprobe -rv uvcvideo
-```
-
-Remember you must add this line using **sudo visudo**
-
-After that install the extension from [GNOME Shell extensions](https://extensions.gnome.org/)
+Install the extension from [GNOME Shell extensions](https://extensions.gnome.org/)
 
 ### Configuration
 

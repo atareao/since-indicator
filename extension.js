@@ -172,11 +172,11 @@ var WebcamManager = GObject.registerClass(
         _get_help(){
             let menu_help = new PopupMenu.PopupSubMenuMenuItem(_('Help'));
             menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('Project Page'), 'info', 'https://github.com/atareao/microphone-loopback'));
+                _('Project Page'), 'info', 'https://github.com/atareao/webcam-manager'));
             menu_help.menu.addMenuItem(this._create_help_menu_item(
                 _('Get help online...'), 'help', 'https://www.atareao.es/aplicacion/desactivar-tu-webcam/'));
             menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('Report a bug...'), 'bug', 'https://github.com/atareao/microphone-loopback/issues'));
+                _('Report a bug...'), 'bug', 'https://github.com/atareao/webcam-manager/issues'));
 
             menu_help.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
             
