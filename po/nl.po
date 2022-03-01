@@ -1,0 +1,217 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-17 08:36+0200\n"
+"PO-Revision-Date: 2022-03-01 18:17+0100\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: schemas/es.atareao.webcam-manager.gschema.xml:6
+msgid "Debug Mode"
+msgstr "Foutopsporingsmodus"
+
+#: schemas/es.atareao.webcam-manager.gschema.xml:7
+msgid "Enable debug features and logging"
+msgstr "Schakel foutopsporingsfuncties in en leg een logboek aan"
+
+#: schemas/es.atareao.webcam-manager.gschema.xml:11
+msgid "Watch the webcam"
+msgstr "Webcamstatus controleren"
+
+#: schemas/es.atareao.webcam-manager.gschema.xml:12
+msgid "Check if kernel module is loaded"
+msgstr "Controleer of de kernelmodule geladen is"
+
+#: schemas/es.atareao.webcam-manager.gschema.xml:16
+msgid "Watch time"
+msgstr "Controletijd"
+
+#: schemas/es.atareao.webcam-manager.gschema.xml:17
+msgid "Time to check if kernel module is loaded"
+msgstr "Wanneer er moet worden gecontroleerd of de kernelmodule geladen is"
+
+#: schemas/es.atareao.webcam-manager.gschema.xml:21
+msgid "Dark theme"
+msgstr "Donker thema gebruiken"
+
+#: schemas/es.atareao.webcam-manager.gschema.xml:22
+msgid "Enable dark theme otherwise light theme"
+msgstr "Gebruik het donkere thema in plaats van het lichte"
+
+#: extension.js:69
+msgid "Disable the webcam"
+msgstr "Webcam uitschakelen"
+
+#: extension.js:70
+msgid "Enable the webcam"
+msgstr "Webcam inschakelen"
+
+#: extension.js:78
+msgid "Settings"
+msgstr "Voorkeuren"
+
+#: extension.js:145
+msgid "Disable webcam"
+msgstr "Webcam uitschakelen"
+
+#: extension.js:148
+msgid "Enable webcam"
+msgstr "Webcam inschakelen"
+
+#: extension.js:173
+msgid "Help"
+msgstr "Hulp"
+
+#: extension.js:175
+msgid "Project Page"
+msgstr "Website"
+
+#: extension.js:177
+msgid "Get help online..."
+msgstr "Hulppagina openen…"
+
+#: extension.js:179
+msgid "Report a bug..."
+msgstr "Probleem melden…"
+
+#: extension.js:184
+msgid "El atareao"
+msgstr "El atareao"
+
+#: extension.js:186
+msgid "GitHub"
+msgstr "GitHub"
+
+#: extension.js:188
+msgid "Twitter"
+msgstr "Twitter"
+
+#: extension.js:190
+msgid "Telegram"
+msgstr "Telegram"
+
+#: extension.js:192
+msgid "Mastodon"
+msgstr "Mastodon"
+
+#: extension.js:194
+msgid "Spotify"
+msgstr "Spotify"
+
+#: extension.js:196
+msgid "YouTube"
+msgstr "YouTube"
+
+#: dialogwidgets.js:27
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: dialogwidgets.js:28
+msgid "Ok"
+msgstr "Oké"
+
+#: preferenceswidget.js:232
+msgid "Nothing"
+msgstr "Niets"
+
+#: preferenceswidget.js:245
+msgid "True"
+msgstr "Waar"
+
+#: preferenceswidget.js:258
+msgid "False"
+msgstr "Niet waar"
+
+#: preferenceswidget.js:407
+msgid "Items"
+msgstr "Items"
+
+#: preferenceswidget.js:418
+msgid "ssh tunnel instruction"
+msgstr "ssh-tunnelinstructie"
+
+#: prefs.js:63
+msgid "Webcam Manager"
+msgstr "Webcambeheer"
+
+#: prefs.js:68
+msgid "Version: "
+msgstr "Versie: "
+
+#: prefs.js:79
+msgid "Atareao"
+msgstr "Atareao"
+
+#: prefs.js:86
+msgid "Copyright © 2018 Lorenzo Carbonell"
+msgstr "Auteursrecht © 2018 Lorenzo Carbonell"
+
+#: prefs.js:93
+msgid ""
+"THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS "
+"OR\n"
+msgstr ""
+"THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS "
+"OR\n"
+
+#: prefs.js:94
+msgid ""
+"IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n"
+msgstr ""
+"IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n"
+
+#: prefs.js:95
+msgid ""
+"FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL "
+"THE\n"
+msgstr ""
+"FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL "
+"THE\n"
+
+#: prefs.js:96
+msgid ""
+"AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n"
+msgstr ""
+"AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n"
+
+#: prefs.js:97
+msgid ""
+"LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\n"
+msgstr ""
+"LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\n"
+
+#: prefs.js:98
+msgid ""
+"FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER "
+"DEALINGS\n"
+msgstr ""
+"FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER "
+"DEALINGS\n"
+
+#: prefs.js:99
+msgid "IN THE SOFTWARE.\n"
+msgstr "IN THE SOFTWARE.\n"
+
+#: prefs.js:126
+msgid "Preferences"
+msgstr "Voorkeuren"
+
+#: prefs.js:130
+msgid "Options"
+msgstr "Opties"
+
+#: prefs.js:138
+msgid "About"
+msgstr "Over"
