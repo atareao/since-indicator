@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-18 20:07+0200\n"
+"POT-Creation-Date: 2022-06-18 20:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -165,14 +165,6 @@ msgstr ""
 msgid "Report an issue"
 msgstr ""
 
-#: extension.js:64
+#: extension.js:58
 msgid "Settings"
-msgstr ""
-
-#: extension.js:108
-msgid "Disable webcam"
-msgstr ""
-
-#: extension.js:111
-msgid "Enable webcam"
 msgstr ""

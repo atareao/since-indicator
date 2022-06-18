@@ -8,5 +8,6 @@
   "shell-version": ["40", "41", "42"],
   "url": "https://www.atareao.es/aplicacion/since-indicator",
   "uuid": "since-indicator@atareao.es",
+  "icon": "since-indicator",
   "version": 1
 }

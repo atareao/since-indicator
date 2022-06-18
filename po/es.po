@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Webcam manager - 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-18 20:07+0200\n"
+"POT-Creation-Date: 2022-06-18 20:40+0200\n"
 "PO-Revision-Date: 2018-09-22 08:42+0200\n"
 "Last-Translator: Lorenzo <atareao@atareao.es>\n"
 "Language-Team: Language *\n"
@@ -25,29 +25,28 @@ msgid "Enable debug features and logging"
 msgstr "Habilita el modo de depuración"
 
 #: schemas/org.gnome.shell.extensions.since-indicator.gschema.xml:11
-#, fuzzy
 msgid "Warning time"
-msgstr "Tiempo entre comprobaciones"
+msgstr "Tiempo para el primer aviso"
 
 #: schemas/org.gnome.shell.extensions.since-indicator.gschema.xml:12
 msgid "Set the warning time"
-msgstr ""
+msgstr "Configura el primer aviso"
 
 #: schemas/org.gnome.shell.extensions.since-indicator.gschema.xml:16
 msgid "Danger time"
-msgstr ""
+msgstr "Tiempo para el segundo aviso"
 
 #: schemas/org.gnome.shell.extensions.since-indicator.gschema.xml:17
 msgid "Set the danger time"
-msgstr ""
+msgstr "Configura el segundo aviso"
 
 #: schemas/org.gnome.shell.extensions.since-indicator.gschema.xml:21
 msgid "Enable notifications"
-msgstr ""
+msgstr "Habilita las notificaciones"
 
 #: schemas/org.gnome.shell.extensions.since-indicator.gschema.xml:22
 msgid "Show notifications on warning or danger time"
-msgstr ""
+msgstr "Muestra notificaciones para el primer y segundo aviso"
 
 #: dialogwidgets.js:27
 msgid "Cancel"
@@ -59,11 +58,11 @@ msgstr "Ok"
 
 #: prefs.js:50
 msgid "Indicator options"
-msgstr ""
+msgstr "Opciones del indicador"
 
 #: prefs.js:56
 msgid "Since Indicator Preferences"
-msgstr ""
+msgstr "Preferencias de Since Indicator"
 
 #: prefs.js:59
 msgid "About"
@@ -71,7 +70,7 @@ msgstr "Acerca de..."
 
 #: prefs.js:68
 msgid "Since Indicator Configuration"
-msgstr ""
+msgstr "Configuración de Since Indicator"
 
 #: preferenceswidget.js:248
 msgid "Nothing"
@@ -87,183 +86,84 @@ msgstr "Falso"
 
 #: preferenceswidget.js:468 preferenceswidget.js:999
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 #: preferenceswidget.js:515 preferenceswidget.js:533 preferenceswidget.js:562
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
 #: preferenceswidget.js:521 preferenceswidget.js:533 preferenceswidget.js:562
 msgid "Service"
-msgstr ""
+msgstr "Servicio"
 
 #: preferenceswidget.js:1009
 msgid "Remove"
-msgstr ""
+msgstr "Quitar"
 
 #: aboutpage.js:45
 msgid "Buy me a coffee"
-msgstr ""
+msgstr "Invítame a un café"
 
 #: aboutpage.js:51
-#, fuzzy
 msgid "Version"
-msgstr "Versión: "
+msgstr "Versión"
 
 #: aboutpage.js:53
-#, fuzzy
 msgid "GNOME Version"
-msgstr "Versión: "
+msgstr "Versión de GNOME"
 
 #: aboutpage.js:56
 msgid "OS"
-msgstr ""
+msgstr "OS"
 
 #: aboutpage.js:58
 msgid "SessionType"
-msgstr ""
+msgstr "Tipo de sesión"
 
 #: aboutpage.js:83
 msgid "Developers"
-msgstr ""
+msgstr "Desarrolladores"
 
 #: aboutpage.js:90
 msgid "Contributors"
-msgstr ""
+msgstr "Contribuidores"
 
 #: aboutpage.js:91
 msgid "Thank you to all contributors!"
-msgstr ""
+msgstr "Gracia a todos los contribuidores!"
 
 #: aboutpage.js:92
 msgid "For a list of all contributors, please visit"
-msgstr ""
+msgstr "Para una lista completa de todos los contribuidores, visita"
 
 #: aboutpage.js:101
 msgid "Supporters"
-msgstr ""
+msgstr "Patrocinadores"
 
 #: aboutpage.js:102
 msgid "Thank you to all supporters!"
-msgstr ""
+msgstr "Gracias a todos los patrocinadores"
 
 #: aboutpage.js:103
 msgid "For a list of all supporters, please visit"
-msgstr ""
+msgstr "Para una lista completa de todos los patrocinadores, visita"
 
 #: aboutpage.js:110
 msgid "License"
-msgstr ""
+msgstr "Licencia"
 
 #: aboutpage.js:123
 msgid "More info"
-msgstr ""
+msgstr "Mas información"
 
 #: aboutpage.js:133
 msgid "More information"
-msgstr ""
+msgstr "Mas información"
 
 #: aboutpage.js:136
-#, fuzzy
 msgid "Report an issue"
 msgstr "Informa de un error..."
 
-#: extension.js:64
+#: extension.js:58
 msgid "Settings"
 msgstr "Configuración"
-
-#: extension.js:108
-msgid "Disable webcam"
-msgstr "Inhabilita la Webcam"
-
-#: extension.js:111
-#, fuzzy
-msgid "Enable webcam"
-msgstr "Habilita la configuración"
-
-#~ msgid "Dark theme"
-#~ msgstr "Tema oscuro"
-
-#~ msgid "Enable dark theme otherwise light theme"
-#~ msgstr "Habilita el tema oscuro"
-
-#~ msgid "Webcam Manager"
-#~ msgstr "Webcam Manager"
-
-#~ msgid "Version: "
-#~ msgstr "Versión: "
-
-#~ msgid "Atareao"
-#~ msgstr "Atareao"
-
-#~ msgid "Copyright © 2018 Lorenzo Carbonell"
-#~ msgstr "Copyright © 2018 Lorenzo Carbonell"
-
-#~ msgid "Preferences"
-#~ msgstr "Preferencias"
-
-#~ msgid "Options"
-#~ msgstr "Opcions"
-
-#~ msgid "Watch the webcam"
-#~ msgstr "Vigila la webcam"
-
-#~ msgid "Check if kernel module is loaded"
-#~ msgstr "Comprueba si el módulo del kernel está cargado"
-
-#~ msgid "Time to check if kernel module is loaded"
-#~ msgstr "Tiempo entre comprobaciones de la carga del módulo del kernel"
-
-#~ msgid "Disable the webcam"
-#~ msgstr "Inhabilita la Webcam"
-
-#~ msgid "Enable the webcam"
-#~ msgstr "Habilita la webcam"
-
-#~ msgid "Help"
-#~ msgstr "Ayuda"
-
-#~ msgid "Project Page"
-#~ msgstr "Página del proyecto"
-
-#~ msgid "Get help online..."
-#~ msgstr "Ayuda en línea..."
-
-#~ msgid "El atareao"
-#~ msgstr "El atareao"
-
-#~ msgid "GitHub"
-#~ msgstr "GitHub"
-
-#~ msgid "Twitter"
-#~ msgstr "Twitter"
-
-#~ msgid "Telegram"
-#~ msgstr "Telegram"
-
-#~ msgid "Mastodon"
-#~ msgstr "Mastodon"
-
-#~ msgid "Spotify"
-#~ msgstr "Spotify"
-
-#~ msgid "YouTube"
-#~ msgstr "YouTube"
-
-#~ msgid "Items"
-#~ msgstr "Elementos"
-
-#~ msgid "Enable WireGuard"
-#~ msgstr "Habilita la configuración"
-
-#~ msgid "Translate this application..."
-#~ msgstr "Traduce la aplicación..."
-
-#~ msgid "Follow me in Twitter"
-#~ msgstr "Sígueme en Twitter"
-
-#~ msgid "Follow me in Facebook"
-#~ msgstr "Sígueme en Facebook"
-
-#~ msgid "Follow me in Google+"
-#~ msgstr "Sígueme en Google+"
