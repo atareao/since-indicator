@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="aware@atareao.es">
+    <schema path="/org/gnome/shell/extensions/since-indicator/" id="org.gnome.shell.extensions.since-indicator">
+        <key name="debug" type="b">
+            <default>false</default>
+            <summary>Debug Mode</summary>
+            <description>Enable debug features and logging</description>
+        </key>
+        <key name="warning-time" type="i">
+            <default>60</default>
+            <summary>Warning time</summary>
+            <description>Set the warning time</description>
+        </key>
+        <key name="danger-time" type="i">
+            <default>120</default>
+            <summary>Danger time</summary>
+            <description>Set the danger time</description>
+        </key>
+        <key name="notifications" type="b">
+            <default>false</default>
+            <summary>Enable notifications</summary>
+            <description>Show notifications on warning or danger time</description>
+        </key>
+    </schema>
+</schemalist>

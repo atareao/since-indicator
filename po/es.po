@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Webcam manager - 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-17 07:49+0200\n"
+"POT-Creation-Date: 2022-06-18 20:07+0200\n"
 "PO-Revision-Date: 2018-09-22 08:42+0200\n"
 "Last-Translator: Lorenzo <atareao@atareao.es>\n"
 "Language-Team: Language *\n"
@@ -16,102 +16,38 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: schemas/es.atareao.webcam-manager.gschema.xml:6
+#: schemas/org.gnome.shell.extensions.since-indicator.gschema.xml:6
 msgid "Debug Mode"
 msgstr "Modo depuración"
 
-#: schemas/es.atareao.webcam-manager.gschema.xml:7
+#: schemas/org.gnome.shell.extensions.since-indicator.gschema.xml:7
 msgid "Enable debug features and logging"
 msgstr "Habilita el modo de depuración"
 
-#: schemas/es.atareao.webcam-manager.gschema.xml:11
-msgid "Watch the webcam"
-msgstr "Vigila la webcam"
-
-#: schemas/es.atareao.webcam-manager.gschema.xml:12
-msgid "Check if kernel module is loaded"
-msgstr "Comprueba si el módulo del kernel está cargado"
-
-#: schemas/es.atareao.webcam-manager.gschema.xml:16
-msgid "Watch time"
+#: schemas/org.gnome.shell.extensions.since-indicator.gschema.xml:11
+#, fuzzy
+msgid "Warning time"
 msgstr "Tiempo entre comprobaciones"
 
-#: schemas/es.atareao.webcam-manager.gschema.xml:17
-msgid "Time to check if kernel module is loaded"
-msgstr "Tiempo entre comprobaciones de la carga del módulo del kernel"
+#: schemas/org.gnome.shell.extensions.since-indicator.gschema.xml:12
+msgid "Set the warning time"
+msgstr ""
 
-#: schemas/es.atareao.webcam-manager.gschema.xml:21
-msgid "Dark theme"
-msgstr "Tema oscuro"
+#: schemas/org.gnome.shell.extensions.since-indicator.gschema.xml:16
+msgid "Danger time"
+msgstr ""
 
-#: schemas/es.atareao.webcam-manager.gschema.xml:22
-msgid "Enable dark theme otherwise light theme"
-msgstr "Habilita el tema oscuro"
+#: schemas/org.gnome.shell.extensions.since-indicator.gschema.xml:17
+msgid "Set the danger time"
+msgstr ""
 
-#: extension.js:69
-msgid "Disable the webcam"
-msgstr "Inhabilita la Webcam"
+#: schemas/org.gnome.shell.extensions.since-indicator.gschema.xml:21
+msgid "Enable notifications"
+msgstr ""
 
-#: extension.js:70
-msgid "Enable the webcam"
-msgstr "Habilita la webcam"
-
-#: extension.js:78
-msgid "Settings"
-msgstr "Configuración"
-
-#: extension.js:145
-msgid "Disable webcam"
-msgstr "Inhabilita la Webcam"
-
-#: extension.js:148
-#, fuzzy
-msgid "Enable webcam"
-msgstr "Habilita la configuración"
-
-#: extension.js:173
-msgid "Help"
-msgstr "Ayuda"
-
-#: extension.js:175
-msgid "Project Page"
-msgstr "Página del proyecto"
-
-#: extension.js:177
-msgid "Get help online..."
-msgstr "Ayuda en línea..."
-
-#: extension.js:179
-msgid "Report a bug..."
-msgstr "Informa de un error..."
-
-#: extension.js:184
-msgid "El atareao"
-msgstr "El atareao"
-
-#: extension.js:186
-msgid "GitHub"
-msgstr "GitHub"
-
-#: extension.js:188
-msgid "Twitter"
-msgstr "Twitter"
-
-#: extension.js:190
-msgid "Telegram"
-msgstr "Telegram"
-
-#: extension.js:192
-msgid "Mastodon"
-msgstr "Mastodon"
-
-#: extension.js:194
-msgid "Spotify"
-msgstr "Spotify"
-
-#: extension.js:196
-msgid "YouTube"
-msgstr "YouTube"
+#: schemas/org.gnome.shell.extensions.since-indicator.gschema.xml:22
+msgid "Show notifications on warning or danger time"
+msgstr ""
 
 #: dialogwidgets.js:27
 msgid "Cancel"
@@ -121,89 +57,201 @@ msgstr "Cancelar"
 msgid "Ok"
 msgstr "Ok"
 
-#: preferenceswidget.js:232
+#: prefs.js:50
+msgid "Indicator options"
+msgstr ""
+
+#: prefs.js:56
+msgid "Since Indicator Preferences"
+msgstr ""
+
+#: prefs.js:59
+msgid "About"
+msgstr "Acerca de..."
+
+#: prefs.js:68
+msgid "Since Indicator Configuration"
+msgstr ""
+
+#: preferenceswidget.js:248
 msgid "Nothing"
 msgstr "Nada"
 
-#: preferenceswidget.js:245
+#: preferenceswidget.js:261
 msgid "True"
 msgstr "Cierto"
 
-#: preferenceswidget.js:258
+#: preferenceswidget.js:274
 msgid "False"
 msgstr "Falso"
 
-#: preferenceswidget.js:407
-msgid "Items"
-msgstr "Elementos"
-
-#: preferenceswidget.js:418
-msgid "ssh tunnel instruction"
+#: preferenceswidget.js:468 preferenceswidget.js:999
+msgid "Edit"
 msgstr ""
 
-#: prefs.js:63
-msgid "Webcam Manager"
-msgstr "Webcam Manager"
+#: preferenceswidget.js:515 preferenceswidget.js:533 preferenceswidget.js:562
+msgid "Name"
+msgstr ""
 
-#: prefs.js:68
-msgid "Version: "
+#: preferenceswidget.js:521 preferenceswidget.js:533 preferenceswidget.js:562
+msgid "Service"
+msgstr ""
+
+#: preferenceswidget.js:1009
+msgid "Remove"
+msgstr ""
+
+#: aboutpage.js:45
+msgid "Buy me a coffee"
+msgstr ""
+
+#: aboutpage.js:51
+#, fuzzy
+msgid "Version"
 msgstr "Versión: "
 
-#: prefs.js:79
-msgid "Atareao"
-msgstr "Atareao"
+#: aboutpage.js:53
+#, fuzzy
+msgid "GNOME Version"
+msgstr "Versión: "
 
-#: prefs.js:86
-msgid "Copyright © 2018 Lorenzo Carbonell"
-msgstr "Copyright © 2018 Lorenzo Carbonell"
-
-#: prefs.js:93
-msgid ""
-"THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS "
-"OR\n"
+#: aboutpage.js:56
+msgid "OS"
 msgstr ""
 
-#: prefs.js:94
-msgid ""
-"IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n"
+#: aboutpage.js:58
+msgid "SessionType"
 msgstr ""
 
-#: prefs.js:95
-msgid ""
-"FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n"
+#: aboutpage.js:83
+msgid "Developers"
 msgstr ""
 
-#: prefs.js:96
-msgid ""
-"AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n"
+#: aboutpage.js:90
+msgid "Contributors"
 msgstr ""
 
-#: prefs.js:97
-msgid ""
-"LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\n"
+#: aboutpage.js:91
+msgid "Thank you to all contributors!"
 msgstr ""
 
-#: prefs.js:98
-msgid ""
-"FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER "
-"DEALINGS\n"
+#: aboutpage.js:92
+msgid "For a list of all contributors, please visit"
 msgstr ""
 
-#: prefs.js:99
-msgid "IN THE SOFTWARE.\n"
+#: aboutpage.js:101
+msgid "Supporters"
 msgstr ""
 
-#: prefs.js:126
-msgid "Preferences"
-msgstr "Preferencias"
+#: aboutpage.js:102
+msgid "Thank you to all supporters!"
+msgstr ""
 
-#: prefs.js:130
-msgid "Options"
-msgstr "Opcions"
+#: aboutpage.js:103
+msgid "For a list of all supporters, please visit"
+msgstr ""
 
-#: prefs.js:138
-msgid "About"
-msgstr "Acerca de..."
+#: aboutpage.js:110
+msgid "License"
+msgstr ""
+
+#: aboutpage.js:123
+msgid "More info"
+msgstr ""
+
+#: aboutpage.js:133
+msgid "More information"
+msgstr ""
+
+#: aboutpage.js:136
+#, fuzzy
+msgid "Report an issue"
+msgstr "Informa de un error..."
+
+#: extension.js:64
+msgid "Settings"
+msgstr "Configuración"
+
+#: extension.js:108
+msgid "Disable webcam"
+msgstr "Inhabilita la Webcam"
+
+#: extension.js:111
+#, fuzzy
+msgid "Enable webcam"
+msgstr "Habilita la configuración"
+
+#~ msgid "Dark theme"
+#~ msgstr "Tema oscuro"
+
+#~ msgid "Enable dark theme otherwise light theme"
+#~ msgstr "Habilita el tema oscuro"
+
+#~ msgid "Webcam Manager"
+#~ msgstr "Webcam Manager"
+
+#~ msgid "Version: "
+#~ msgstr "Versión: "
+
+#~ msgid "Atareao"
+#~ msgstr "Atareao"
+
+#~ msgid "Copyright © 2018 Lorenzo Carbonell"
+#~ msgstr "Copyright © 2018 Lorenzo Carbonell"
+
+#~ msgid "Preferences"
+#~ msgstr "Preferencias"
+
+#~ msgid "Options"
+#~ msgstr "Opcions"
+
+#~ msgid "Watch the webcam"
+#~ msgstr "Vigila la webcam"
+
+#~ msgid "Check if kernel module is loaded"
+#~ msgstr "Comprueba si el módulo del kernel está cargado"
+
+#~ msgid "Time to check if kernel module is loaded"
+#~ msgstr "Tiempo entre comprobaciones de la carga del módulo del kernel"
+
+#~ msgid "Disable the webcam"
+#~ msgstr "Inhabilita la Webcam"
+
+#~ msgid "Enable the webcam"
+#~ msgstr "Habilita la webcam"
+
+#~ msgid "Help"
+#~ msgstr "Ayuda"
+
+#~ msgid "Project Page"
+#~ msgstr "Página del proyecto"
+
+#~ msgid "Get help online..."
+#~ msgstr "Ayuda en línea..."
+
+#~ msgid "El atareao"
+#~ msgstr "El atareao"
+
+#~ msgid "GitHub"
+#~ msgstr "GitHub"
+
+#~ msgid "Twitter"
+#~ msgstr "Twitter"
+
+#~ msgid "Telegram"
+#~ msgstr "Telegram"
+
+#~ msgid "Mastodon"
+#~ msgstr "Mastodon"
+
+#~ msgid "Spotify"
+#~ msgstr "Spotify"
+
+#~ msgid "YouTube"
+#~ msgstr "YouTube"
+
+#~ msgid "Items"
+#~ msgstr "Elementos"
 
 #~ msgid "Enable WireGuard"
 #~ msgstr "Habilita la configuración"

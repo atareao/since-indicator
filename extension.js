@@ -1,5 +1,5 @@
 /*
- * wireguard-indicator@atareao.es
+ * aware@atareao.es
  *
  * Copyright (c) 2020 Lorenzo Carbonell Cerezo <a.k.a. atareao>
  *
@@ -22,13 +22,6 @@
  * IN THE SOFTWARE.
  */
 
-imports.gi.versions.Gtk = "3.0";
-imports.gi.versions.Gdk = "3.0";
-imports.gi.versions.Gio = "2.0";
-imports.gi.versions.Clutter = "1.0";
-imports.gi.versions.St = "1.0";
-imports.gi.versions.GObject = "3.0";
-imports.gi.versions.GLib = "2.0";
 
 const {Gtk, Gdk, Gio, Clutter, St, GObject, GLib} = imports.gi;
 
@@ -40,100 +33,70 @@ const PopupMenu = imports.ui.popupMenu;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Extension = ExtensionUtils.getCurrentExtension();
-const Convenience = Extension.imports.convenience;
 
 const Gettext = imports.gettext.domain(Extension.uuid);
 const _ = Gettext.gettext;
 
-
-var WebcamManager = GObject.registerClass(
-    class WebcamManager extends PanelMenu.Button{
+var AwareIndicator = GObject.registerClass(
+    class AwareIndicator extends PanelMenu.Button{
         _init(){
-            super._init(St.Align.START);
+            super._init(0.0, "AwareIndicator");
+            this._settings = ExtensionUtils.getSettings();
+            this._sourceId = null;
+            this._startTime = GLib.DateTime.new_now_utc();
 
-            Gtk.IconTheme.get_default().append_search_path(
-                Extension.dir.get_child('icons').get_path());
+            /* Icon indicator */
+            let box = new St.BoxLayout({vertical: false,
+                                        style_class: 'panel-status-menu-box'});
+            this.label = new St.Label({
+                text: '',
+                y_expand: true,
+                y_align: Clutter.ActorAlign.CENTER });
+            //this.label.clutter_text.set_color(Clutter.Color.from_string('#DED336')[1]);
+            box.add(this.label);
+            this.add_child(box);
 
-            let box = new St.BoxLayout();
-            let label = new St.Label({text: 'Button',
-                                       y_expand: true,
-                                       y_align: Clutter.ActorAlign.CENTER });
-            //box.add(label);
-            this.icon = new St.Icon({style_class: 'system-status-icon'});
-            this._update();
-            box.add(this.icon);
-            //box.add(PopupMenu.arrowIcon(St.Side.BOTTOM));
-            this.actor.add_child(box);
 
-            this.webcamSwitch = new PopupMenu.PopupSwitchMenuItem(
-                _('Disable the webcam'), {active: true})
-            this.webcamSwitch.label.set_text(_('Enable the webcam'));
-            this.webcamSwitch.connect('toggled',
-                                      this._toggleSwitch.bind(this));
+            //this.menu.addMenuItem(this.webcamSwitch)
 
-            this.menu.addMenuItem(this.webcamSwitch)
-
-            this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
+            //this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 
             this.settingsMenuItem = new PopupMenu.PopupMenuItem(_("Settings"));
             this.settingsMenuItem.connect('activate', () => {
                 ExtensionUtils.openPrefs();
             });
-
             this.menu.addMenuItem(this.settingsMenuItem);
-            this.menu.addMenuItem(this._get_help());
 
-            this.sourceId = 0;
-            this._settings = Convenience.getSettings();
-            this._settingsChanged();
-            this._settings.connect('changed',
-                                   this._settingsChanged.bind(this));
-        }
+            this._settings = ExtensionUtils.getSettings();
+            this._handlerId = this._settings.connect('changed', ()=>{
+                this._loadPreferences();
+            });
 
-        _toggleSwitch(widget, value){
-            let setstatus = ((value == true) ? '-av': '-rv');
-            try {
-                let command = ['pkexec', '--user', 'root', 'modprobe',
-                               setstatus, 'uvcvideo'];
-                let proc = Gio.Subprocess.new(
-                    command,
-                    Gio.SubprocessFlags.STDOUT_PIPE | Gio.SubprocessFlags.STDERR_PIPE
-                );
-                proc.communicate_utf8_async(null, null, (proc, res) => {
-                    try{
-                        let [, stdout, stderr] = proc.communicate_utf8_finish(res);
-                        this._update();
-                    }catch(e){
-                        logError(e);
-                    }
-                });
-            } catch (e) {
-                logError(e);
+            if(this._sourceId){
+                GLib.source_remove(this._sourceId);
+                this._sourceId = null;
             }
-        }
-
-        _update(){
-            try {
-                let command = ['lsmod'];
-                let proc = Gio.Subprocess.new(
-                    command,
-                    Gio.SubprocessFlags.STDOUT_PIPE | Gio.SubprocessFlags.STDERR_PIPE
-                );
-                proc.communicate_utf8_async(null, null, (proc, res) => {
-                    try {
-                        let [, stdout, stderr] = proc.communicate_utf8_finish(res);
-                        let active = (stdout.indexOf('uvcvideo') > -1);
-                        this._set_icon_indicator(active);
-                    } catch (e) {
-                        logError(e);
-                    } finally {
-                        //loop.quit();
+            this._sourceId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 60, ()=>{
+                let current = GLib.DateTime.new_now_utc();
+                let diff = Math.round(current.difference(this._startTime) / 1000000 / 60);
+                let aware = null;
+                if(diff < 60){
+                    aware = `${diff}m`
+                }else{
+                    let hours = Math.round(diff/60);
+                    let minutes = Math.round(diff - hours*60);
+                    aware = `${hours}h:${minutes}m`
+                }
+                this.label.set_text(aware);
+                if(this._showNotifications){
+                    if(diff > this._dangerTime){
+                        Main.notify("Since Indicator", `Danger. You have been working continuously for more than ${this._dangerTime} minutes`);
+                    }else if (diff > this._warningTime){
+                        Main.notify("Since Indicator", `Warning: You have been working continuously for more than ${this._warningTime} minutes`);
                     }
-                });
-            } catch (e) {
-                logError(e);
-            }
-            return true;
+                }
+                return true;
+            });
         }
 
         _set_icon_indicator(active){
@@ -160,86 +123,52 @@ var WebcamManager = GObject.registerClass(
             }
         }
 
-        _create_help_menu_item(text, icon_name, url){
-            let icon = this._get_icon(icon_name);
-            let menu_item = new PopupMenu.PopupImageMenuItem(text, icon);
-            menu_item.connect('activate', () => {
-                Gio.app_info_launch_default_for_uri(url, null);
-            });
-            return menu_item;
-        }
-
-        _get_help(){
-            let menu_help = new PopupMenu.PopupSubMenuMenuItem(_('Help'));
-            menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('Project Page'), 'info', 'https://github.com/atareao/webcam-manager'));
-            menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('Get help online...'), 'help', 'https://www.atareao.es/aplicacion/desactivar-tu-webcam/'));
-            menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('Report a bug...'), 'bug', 'https://github.com/atareao/webcam-manager/issues'));
-
-            menu_help.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
-            
-            menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('El atareao'), 'atareao', 'https://www.atareao.es'));
-            menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('GitHub'), 'github', 'https://github.com/atareao'));
-            menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('Twitter'), 'twitter', 'https://twitter.com/atareao'));
-            menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('Telegram'), 'telegram', 'https://t.me/canal_atareao'));
-            menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('Mastodon'), 'mastodon', 'https://mastodon.social/@atareao'));
-            menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('Spotify'), 'spotify', 'https://open.spotify.com/show/2v0fC8PyeeUTQDD67I0mKW'));
-            menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('YouTube'), 'youtube', 'http://youtube.com/c/atareao'));
-            return menu_help;
-        }
-
-        _get_icon(icon_name){
-            let base_icon = Extension.path + '/icons/' + icon_name;
-            let file_icon = Gio.File.new_for_path(base_icon + '.png')
-            if(file_icon.query_exists(null) == false){
-                file_icon = Gio.File.new_for_path(base_icon + '.svg')
+        _get_icon(iconName){
+            const basePath = Extension.dir.get_child("icons").get_path();
+            let fileIcon = Gio.File.new_for_path(
+                `${basePath}/${iconName}.svg`);
+            if(fileIcon.query_exists(null) == false){
+                fileIcon = Gio.File.new_for_path(
+                `${basePath}/${iconName}.png`);
             }
-            if(file_icon.query_exists(null) == false){
+            if(fileIcon.query_exists(null) == false){
                 return null;
             }
-            let icon = Gio.icon_new_for_string(file_icon.get_path());
-            return icon;
+            return Gio.icon_new_for_string(fileIcon.get_path());
         }
 
-        _settingsChanged(){
-            this._update();
-            let checktime = this._settings.get_value('watch-time').deep_unpack();
-            let monitor = this._settings.get_value('monitor').deep_unpack();
-            if(this._sourceId > 0){
+        _getValue(keyName){
+            return this._settings.get_value(keyName).deep_unpack();
+        }
+
+        _loadPreferences(){
+            this._warningTime = this._getValue('warning-time');
+            this._dangerTime = this._getValue('danger-time');
+            this._showNotifications = this._getValue('notifications');
+        }
+
+        destroy(){
+            if(this._sourceId){
                 GLib.source_remove(this._sourceId);
+                this._sourceId = null;
             }
-            if(monitor){
-                this._sourceId = GLib.timeout_add_seconds(
-                    GLib.PRIORITY_DEFAULT, checktime,
-                    this._update.bind(this));
-                log(this._sourceId);
-            }
+            super.destroy();
         }
     }
 );
-var button;
+
+let awareIndicator = null;
 
 function init() {
-    Convenience.initTranslations();
+    ExtensionUtils.initTranslations();
 }
 
 function enable() {
-    button = new WebcamManager();
-    Main.panel.addToStatusArea('Webcam Manager', button, 0, 'right');
+    awareIndicator = new AwareIndicator();
+    Main.panel.addToStatusArea('AwareIndicator', awareIndicator);
 }
 
 function disable() {
-    if(button.sourceId > 0){
-        GLib.source_remove(button.sourceId);
-    }
-    button.destroy();
+    awareIndicator.destroy();
+    awareIndicator = null;
 }
