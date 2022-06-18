@@ -62,7 +62,7 @@ var SinceIndicatorPreferencesWidget = GObject.registerClass(
 );
 
 function buildPrefsWidget() {
-    let preferencesWidget = new MicrophoneLoopbackPreferencesWidget();
+    let preferencesWidget = new SinceIndicatorPreferencesWidget();
     preferencesWidget.connect("realize", ()=>{
         const window = preferencesWidget.get_root();
         window.set_title(_("Since Indicator Configuration"));
