@@ -31,8 +31,6 @@ const AboutPage = Extension.imports.aboutpage.AboutPage;
 const Gettext = imports.gettext.domain(Extension.uuid);
 const _ = Gettext.gettext;
 
-const DialogWidgets = Extension.imports.dialogwidgets;
-
 function init() {
     ExtensionUtils.initTranslations();
 }
