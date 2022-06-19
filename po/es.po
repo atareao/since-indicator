@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Webcam manager - 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-18 20:40+0200\n"
+"POT-Creation-Date: 2022-06-19 12:59+0200\n"
 "PO-Revision-Date: 2018-09-22 08:42+0200\n"
 "Last-Translator: Lorenzo <atareao@atareao.es>\n"
 "Language-Team: Language *\n"
@@ -48,27 +48,19 @@ msgstr "Habilita las notificaciones"
 msgid "Show notifications on warning or danger time"
 msgstr "Muestra notificaciones para el primer y segundo aviso"
 
-#: dialogwidgets.js:27
-msgid "Cancel"
-msgstr "Cancelar"
-
-#: dialogwidgets.js:28
-msgid "Ok"
-msgstr "Ok"
-
-#: prefs.js:50
+#: prefs.js:48
 msgid "Indicator options"
 msgstr "Opciones del indicador"
 
-#: prefs.js:56
+#: prefs.js:54
 msgid "Since Indicator Preferences"
 msgstr "Preferencias de Since Indicator"
 
-#: prefs.js:59
+#: prefs.js:57
 msgid "About"
 msgstr "Acerca de..."
 
-#: prefs.js:68
+#: prefs.js:66
 msgid "Since Indicator Configuration"
 msgstr "Configuración de Since Indicator"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-18 20:47+0200\n"
+"POT-Creation-Date: 2022-06-19 12:59+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,27 +49,19 @@ msgstr ""
 msgid "Show notifications on warning or danger time"
 msgstr ""
 
-#: dialogwidgets.js:27
-msgid "Cancel"
-msgstr ""
-
-#: dialogwidgets.js:28
-msgid "Ok"
-msgstr ""
-
-#: prefs.js:50
+#: prefs.js:48
 msgid "Indicator options"
 msgstr ""
 
-#: prefs.js:56
+#: prefs.js:54
 msgid "Since Indicator Preferences"
 msgstr ""
 
-#: prefs.js:59
+#: prefs.js:57
 msgid "About"
 msgstr ""
 
-#: prefs.js:68
+#: prefs.js:66
 msgid "Since Indicator Configuration"
 msgstr ""
 
