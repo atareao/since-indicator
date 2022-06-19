@@ -77,7 +77,7 @@ var AwareIndicator = GObject.registerClass(
                 if(diff < 60){
                     aware = `${diff}m`
                 }else{
-                    let hours = Math.round(diff/60);
+                    let hours = Math.floor(diff/60);
                     let minutes = Math.round(diff - hours*60);
                     aware = `${hours}h:${minutes}m`
                 }
