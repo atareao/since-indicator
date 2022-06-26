@@ -73,6 +73,7 @@ var AwareIndicator = GObject.registerClass(
             this._sourceId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 60, ()=>{
                 let current = GLib.DateTime.new_now_utc();
                 let diff = Math.round(current.difference(this._startTime) / 1000000 / 60);
+                // In a long break
                 let aware = null;
                 if(diff < 60){
                     aware = `${diff}m`

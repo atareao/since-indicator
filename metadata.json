@@ -3,11 +3,15 @@
   "copyright": "2022",
   "description": "A simple menubar app for GNOME Shell that tracks how long you've been using your computer uninterruptedly",
   "gettext-domain": "since-indicator@atareao.es",
+  "icon": "since-indicator",
   "name": "Since Indicator",
   "settings-schema": "org.gnome.shell.extensions.since-indicator",
-  "shell-version": ["40", "41", "42"],
+  "shell-version": [
+    "40",
+    "41",
+    "42"
+  ],
   "url": "https://www.atareao.es/aplicacion/since-indicator",
   "uuid": "since-indicator@atareao.es",
-  "icon": "since-indicator",
   "version": 3
 }

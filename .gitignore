@@ -1,2 +1,2 @@
-*.mo
-*.compiled
+schemas/gschemas.compiled
+locale/
