@@ -7,11 +7,9 @@
   "name": "Since Indicator",
   "settings-schema": "org.gnome.shell.extensions.since-indicator",
   "shell-version": [
-    "40",
-    "41",
-    "42"
+    "40", "41", "42", "43", "44"
   ],
   "url": "https://www.atareao.es/aplicacion/since-indicator",
   "uuid": "since-indicator@atareao.es",
-  "version": 3
+  "version": 4
 }
